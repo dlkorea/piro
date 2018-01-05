@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>피로그래밍</title>
     <style>
-        div h1 {
+        /*div h1 {
             color: red;
             font-size: 50px;
             background: yellow;
             border: 1px solid black;
             box-shadow: 1px 3px 1px black;
-        }
+        }*/
         #list_2 {
             font-size: 20px;
         }
@@ -23,17 +23,67 @@
         h3.txt {
             background: yellow;
         }
-        div#div_tag.tags > h3#title.txt
+        #p_tag {
+            /*background: url('http://www.watchingthenet.com/wp-content/uploads/image/cmdpmptopenfdr5.png');*/
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            color: #eeeeee;
+            white-space: nowrap;
+
+        }
+        #ex_wrapper {
+            display: inline-block;
+            background: #9dc9ec;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            box-shadow: 3px 5px 3px;
+        }
+        #ex {
+            margin: 30px 10px;
+            display: inline-block;
+            background: yellow;
+            width: 200px;
+            height: 200px;
+            /*position: relative;*/
+            border: 0px solid red;
+            border-right-width: 3px;
+            border-bottom-width: 1px;
+            border-bottom-color: blue;
+        }
+        #ex #first {
+            display: inline-block;
+            background: black;
+            width: 50px;
+            height: 50px;
+        }
+        #ex #second {
+            display: inline-block;
+            background: red;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 5%;
+            right: 10%;
+        }
     </style>
 </head>
 <body>
+    <div id="ex_wrapper">
+        <div id="ex">
+            <div id="first"></div>
+            <div id="second"></div>
+        </div>
+    </div>
     <h1>H1 태그</h1>
     <h2>H2 태그</h2>
     <h3 class="txt">H3 태그</h3>
     <h4 class="txt">H4 태그</h4>
     <h5 class="txt">H5 태그</h5>
     <h6>H6 태그</h6>
-    <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+    <p id="p_tag">Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
  Ridiculously fast.
 Django was designed to help developers take applications from concept to completion as quickly as possible.
 
@@ -43,11 +93,13 @@ Django takes security seriously and helps developers avoid many common security 
     </p>
     <a href="http://naver.com/">네이버</a>
 
-    <a href="http://google.com">
+    <a href="http://google.com" target="_blank">
         <button>버튼</button>
     </a>
 
     <img src="flower.jpg" />
+
+    <hr />
 
     <ul>
         <li>
