@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+#menu {
+    padding: 20px;
+    box-shadow: 0 1px 2px;
+}
+#menu span {
+    display: block;
+    width: 1000px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 26px;
+    color: #4ea0e2;
+}
+#content {
+     width: 1000px;
+     margin: auto;
+}
+#content_header {
+    padding: 80px 0 30px 0;
+    margin-bottom: 50px;
+}
+#content_title {
+    text-align: center;
+    color: #565656;
+}
+#content_info {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+#content_body {
+    font-size: 13px;
+    line-height: 18px;
+    color: #565656;
+}
