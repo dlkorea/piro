@@ -115,3 +115,82 @@ random.randint(1, 5)
 
 random.choice(['가위', '바위', '보'])
  - 리스트 원소 중 임의로 하나 return
+
+
+4. 함수
+def 함수이름(arg1, arg2, arg3, arg4=None):
+  로직
+  로직
+  return 리턴값
+
+** 함수는 arg가 없을 수도, return이 없을 수도 있다.
+
+함수이름(1,2,3)
+함수이름(1,2,3,4)
+함수이름(1,2,3, arg4=뭐뭐)
+
+5. 클래스
+
+property
+method
+
+
+class 클래스이름:
+  var1 = 1
+  var2 = 100
+  var3 = '하이'
+
+  def method1(self):
+      ret = self.var1 + self.var2
+      return ret
+
+  def method2(self, string):
+      print(string)
+
+
+class = 일종의 데이터 타입(자료형)
+instance = data
+
+
+class Animal(object):
+    name = None
+    bark_sound = '몰라'
+    color = None
+
+    def bark(self):
+        print(self.bark_sound)
+
+    def chang_color(self, color):
+        self.color = color
+
+    def print_color(self, color):
+        print(self.color)
+
+
+class Dog(Animal):
+    bark_sound = '멍멍'
+
+
+class Cat(Animal):
+    bark_sound = '냐옹'
+
+
+class WhiteDog(Dog):
+    color = '하양'
+
+
+class HW(object):
+    def __init__(self, title, due):
+        self.title = title
+        self.due = due
+
+
+
+
+
+
+
+
+
+
+
