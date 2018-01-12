@@ -1,0 +1,11 @@
+마음의 소리 제목 링크 크롤링
+
+1. http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=tue&page=1
+위 경로의 모든 타이틀과 타이틀 링크 경로 가져오기
+
+2. 위 경로에서 마지막 page=1 부분을 page=2, page=3 등으로 수정해서 1~20페이지까지 타이틀과 타이틀 링크 경로 가져오기
+
+3. page1부터 마지막페이지까지 다 가져오기
+
+** advanced
+4. 제목 이미지 주소도 가져오기

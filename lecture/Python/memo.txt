@@ -186,7 +186,11 @@ class HW(object):
 
 
 
+import random
+random.randint(0, 2)
 
+from random import randint
+randint
 
 
 
