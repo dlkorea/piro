@@ -152,7 +152,7 @@ class RSPGame(object):
     def get_user_input(self):
         """
         list.index(arg) 는 list의 원소 중 arg의 index를 리턴.
-        [1,2,3,0].index(0) == 4
+        [1,2,3,0].index(0) == 3
         """
         user_choice = self.ui.get_user_input()
         return self.choice_list.index(user_choice)
