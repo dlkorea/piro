@@ -21,4 +21,6 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.blog_detail),
+    path('<int:pk>/', views.first_dynamic),
+    path('capture_str/<str:url_path_str>/', views.capture_string),
 ]
