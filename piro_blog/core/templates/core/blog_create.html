@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+  <h1>글쓰기</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="title">제목</label>
+    <input type="text" name="title" /><br />
+
+    <label for="content">내용</label>
+    <input type="text" name="content" /><br />
+
+    <button type="submit">제출</button>
+  </form>
+</div>
+{% endblock %}

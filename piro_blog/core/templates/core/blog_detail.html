@@ -4,36 +4,20 @@
 {% block content %}
 <div style="width: 1000px; margin: auto;">
     <div style="padding: 80px 0 30px 0; margin-bottom: 50px;">
-        <h2 style="text-align: center; color: #565656;">{{ content_title }}</h2>
+        <h2 style="text-align: center; color: #565656;">{{ article.title }}</h2>
         <div style="text-align: right;
                     margin-top: 30px;
                     margin-right: 10px;
                     font-size: 12px;">
-            <span>{{ now|date:"Y. m. d. h:i A" }}</span><br />
+            <span>{{ article.created_at|date:"Y. m. d. h:i A" }}</span><br />
             <span>우철</span>
         </div>
     </div>
     <div style="font-size: 13px; line-height: 18px; color: #565656;">
-        {% for i in range_10 %}
-            <h1>{{ forloop.counter }}</h1>
-            <h1>{{ forloop.last }}</h1>
-            <h4>{{ i }}</h4>
-            {% if i < 5 %}
-            <p>
-                장고(Django, FAQ 발음으로는 "쟁고"(IPA: [ˈdʒæŋgoʊ])[2])는 파이썬으로 작성된 오픈 소스 웹 애플리케이션 프레임워크로, 모델-뷰-컨트롤러 패턴을 느슨하게 적용한다. 2005년 7월에 BSD 사용 허가서로 공개되었다.
-
-                이 웹 애플리케이션 프레임워크는 집시 재즈 기타리스트인 장고 라인하르트의 이름을 따 명명되었다. [3]
-
-                고도의 데이터베이스 기반 웹사이트를 작성하는 데 있어서 수고를 더는 것이 장고의 주된 목표이다. 장고는 콤포넌트의 재사용성(reusability)과 플러그인화 가능성(pluggability), 빠른 개발 등을 강조하고 있다. 또한, "DRY(Don't repeat yourself: 중복배제)" 원리를 따랐다. 설정 파일 일서부터 데이터 모델에까지 파이썬 언어가 구석구석에 쓰였다.
-            </p>
-            {% else %}
-            <p>
-                소프트웨어 프레임워크(software framework)는 복잡한 문제를 해결하거나 서술하는 데 사용되는 기본 개념 구조이다. 간단히 뼈대, 골조(骨組), 프레임워크(framework)라고도 한다. 이렇게 매우 폭넓은 정의는 이 용어를 버즈워드(buzzword)로서, 특히 소프트웨어 환경에서 사용할 수 있게 만들어 준다.
-            </p>
-            {% endif %}
-        {% empty %}
-            <h1>내용이 없습니다!!!</h1>
-        {% endfor %}
+        <p>{{ article.content }}</p>
     </div>
+    <a href="{% url 'blog_list' %}">
+        <button style="padding: 10px 20px;">목록으로</button>
+    </a>
 </div>
 {% endblock %}

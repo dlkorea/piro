@@ -1,26 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils import timezone
+from django.urls import reverse
+
+from .models import Article
 
 
-def blog_detail(request):
-    content_title = '문서 제목입니다.!!!!'
+def blog_detail(request, pk):
+    article = Article.objects.get(pk=pk)
     ctx = {
-        'now': timezone.now(),
-        'content_title': content_title,
-        'range_10': range(10),
+        'article': article,
     }
     return render(request, 'core/blog_detail.html', ctx)
 
 
-def first_dynamic(request, pk):
+def blog_list(request):
+    article_list = Article.objects.all()
     ctx = {
-        'pk': pk,
+        'article_list': article_list,
     }
-    return render(request, 'core/first_dynamic.html', ctx)
+    return render(request, 'core/blog_list.html', ctx)
 
 
-def capture_string(request, url_path_str):
-    ctx = {
-        'path': url_path_str,
-    }
-    return render(request, 'core/first_dynamic.html', ctx)
+def blog_create(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+
+        article = Article.objects.create(title=title, content=content)
+        url = reverse('blog_detail', kwargs={'pk': article.pk, })
+        return redirect(url)
+
+    return render(request, 'core/blog_create.html')
